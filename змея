@@ -209,6 +209,10 @@ def drawGrid():
         pygame.draw.line(DISPLAYSURF, DARKGRAY, (x, 0), (x, WINDOWHEIGHT))
     for y in range(0, WINDOWHEIGHT, CELLSIZE): # draw horizontal lines
         pygame.draw.line(DISPLAYSURF, DARKGRAY, (0, y), (WINDOWWIDTH, y))
+        
+ mixer.init()
+mixer.music.load('evrejskaja_muzika_-_podlaja_evrejskaja_muzika_(z2.fm) (1).mp3')
+mixer.music.play()
 
 
 if __name__ == '__main__':
