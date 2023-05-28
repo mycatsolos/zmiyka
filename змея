@@ -1,3 +1,5 @@
+
+
 import random, pygame, sys
 from pygame.locals import *
 
@@ -38,7 +40,7 @@ def main():
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
     BASICFONT = pygame.font.Font('freesansbold.ttf', 18)
-    pygame.display.set_caption('Wormy')
+    pygame.display.set_caption('Zmiyka')
 
     showStartScreen()
     while True:
@@ -167,7 +169,7 @@ def getRandomLocation():
 def showGameOverScreen():
     gameOverFont = pygame.font.Font('freesansbold.ttf', 150)
     gameSurf = gameOverFont.render('Врізався', True, WHITE)
-    overSurf = gameOverFont.render('Врізався', True, WHITE)
+    overSurf = gameOverFont.render('Програш', True, WHITE)
     gameRect = gameSurf.get_rect()
     overRect = overSurf.get_rect()
     gameRect.midtop = (WINDOWWIDTH / 2, 10)
@@ -186,7 +188,7 @@ def showGameOverScreen():
             return
 
 def drawScore(score):
-    scoreSurf = BASICFONT.render('Зжерло: %s' % (score), True, WHITE)
+    scoreSurf = BASICFONT.render('З`Їло: %s' % (score), True, WHITE)
     scoreRect = scoreSurf.get_rect()
     scoreRect.topleft = (WINDOWWIDTH - 120, 10)
     DISPLAYSURF.blit(scoreSurf, scoreRect)
